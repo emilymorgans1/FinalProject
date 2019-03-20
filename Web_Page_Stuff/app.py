@@ -37,7 +37,8 @@ def prepare_image(img):
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    img = ""
+    return render_template("index.html",img=img)
 
 @app.route('/image', methods=['GET', 'POST'])
 def upload_file():
