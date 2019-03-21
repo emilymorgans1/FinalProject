@@ -67,17 +67,38 @@
           <!-- <input type="file" name="file"> -->
           <!-- <a href="/image"> <button>Show Image</button></a> -->
 
-            <p><input type=file name=file>
-               <input type=submit value=Upload>
+            <p><input type=file name=file accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+            <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+               <p><img id="output" width="200" /></p>
+               <input type=submit value=Indentify>
         
+               <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
 
-          <input type="submit" value="Reset">
+               <!-- <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p> -->
+               <!-- <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+               <p><img id="output" width="200" /></p> -->
+               
+               <script>
+               var loadFile = function(event) {
+                   var image = document.getElementById('output');
+                   image.src = URL.createObjectURL(event.target.files[0]);
+               };
+               </script>
+
+
+
+
+
+
+
+
+
       </p>
       <p>
-        <img src="{{img}}">
+        <img src={{file}}>
       </p>
       </form>
-      <a href="/image"> <button>Show Image</button></a>
+      <a href="/"> <button>Reset</button></a>
     </div>
   </header>
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
