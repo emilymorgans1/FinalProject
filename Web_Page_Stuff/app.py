@@ -35,12 +35,12 @@ def prepare_image(img):
     # return the processed image
     return img
 
-@app.route('/')
-def index():
-    img = ""
-    return render_template("index.html",img=img)
+# @app.route('/')
+# def index():
+#     img = ""
+#     return render_template("index.html",img=img)
 
-@app.route('/image', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def upload_file():
     data = {"success": False}
     if request.method == 'POST':
@@ -86,16 +86,17 @@ def upload_file():
 
         return jsonify(data)
 
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
-    '''
+    #return '''
+    # <!doctype html>
+    # <title>Upload new File</title>
+    # <h1>Upload new File</h1>
+    # <form method=post enctype=multipart/form-data>
+    #   <p><input type=file name=file>
+    #      <input type=submit value=Upload>
+    # </form>
+    # '''
 
+    return render_template ("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True,port=8001)
