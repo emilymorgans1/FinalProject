@@ -60,7 +60,7 @@
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-      <h1 class="text-uppercase mb-0">Start Learning "Language"</h1>
+      <h1 class="text-uppercase mb-0">Start Learning Spanish</h1>
       <hr class="star-light">
       <form method="post" enctype="multipart/form-data">
         <p>
@@ -109,6 +109,34 @@
   </div>
 
   <div>{{ data }}</div>
+
+  <script>
+    var translation = '{{ data }}';
+  </script>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="4" bgcolor="#ccc">Translation</th>
+    </tr>
+    <tr>
+      <th>English</th>
+      <th>Spanish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{data.predictions[0]}}</td>
+      <td>Tim</td>
+    </tr>
+
+
+
+
+
+
+
+
 
 <!-- <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script> -->
   <!-- Bootstrap core JavaScript -->

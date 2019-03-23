@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "quantum-boulder-235000",
+  "private_key_id": "96a54f9434b504d577698ecab70378658f1f0e85",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCLUM89IB2j5/Of\nQzLsZc0AesoJJHf96cC1cF9egpy7O/bOrk6akElzbqrBcScXM3ziHZNVNYtpQXCh\nqMtNV6ysbpueyboWtGhllz6xhivOcOC3jAxy2Vs39BKufL4Fhnm5nKYN9RGMIY8B\nS1YUFY+NSmRgNhbs9b/O1X1ueD1qUnezwl5v9Hwb5bcKbaZ+eytoCDgTdRkJY5Mn\nt+E5z84M6nfV03e9+nEn7nIUMl/IUkh4NnadSj810N8TNHgpijbdb7t+4wE9WA7h\nhkrStOrGYM+qdZWV5qJ3Rg9Vys/mU5DvrA7AyR04ePoxiNSopToPpvsRExLVINh0\ny5zVUNdVAgMBAAECggEADx62Wz820FDuhSi1KGh1CxoIft0FI9rghiCbzSVWTtDX\nfL94uvgxbJSEdkmqUS+OnHjSwnL0/jeyumzYIb0D+dPoUl+48VljojD7xicWbomc\nLfeGa1mRN52nAGZ79hwN7nnkoMup+6AxxdVwEm5zncVG5xU/wDh8uH09p4Vnvvfq\n09NsvdIZcF1J31Dt5rIK3X5T+0MNSJGihyAHaTfHTV2K8Q8rk7PUjWxKzsiU247J\np9YjqWvTIvtJ2rlX0Hhp/Y0R89uD5rGqtaJMs9EM0JefGFy49cyMuZQ1GemUppd9\nH4rFeOW3LnC3HoZDF+1yY6KMcC76WseOmHV3Oz6+eQKBgQC//fX/PcG/Jqy5aVGF\n5/9wfIX8ConiHIbN2FlnRisePPjCJon2/JB8j9TdHvjskx2mFkVe4H7IL2tKW3of\nvoAlG5TOlEvJVcC35U3E5C2vLFagGe5qbMaYZkqiyzHLjoAXLKXvfAAZqBPH7iSb\nSt3fMJHR1sSz1MJl2FN3oRWfHQKBgQC5ww1ciGm9+dkuaY4IgUAQDppJcEI/9rxt\nwDgQG/cWzCAp+GHa/cZ7HzyDM8gwJCrT8E4q1oCZoQUVhcX4JaOcg/lpCU+O/z6I\nokuRlHMuQvy1i1Vxhg4tdaT02L9GHJjBpSeTb1IV4yA+OxmE4QxLb+EozjVD+K3L\nwMqvegCLmQKBgQCZgoUb9ZQhs9mtUnF1oP9UQKyczwxad7athgxOEAPP5K5+BnSP\nwHgCsLphpy8fca3mK66B4vxcMdYWmTf3g8lQYlJELry+GcvC/hyFjnCcvNXyo2lH\nPPw5xKhurAt/l8wBO5jd+IbX/NT8KgSpCl6G433ki1Wx+C8LYcGzSGBSXQKBgDOx\nKH2wZCR+a0Y0D1ckiGwvdBWtjHH6OhMcYz1wWsDYSrcDLE/hQKMwXQlxlmp3Fgfm\nHgpjqGOX4C9OC3nzF2VNgFEPSzlSo9cnunmnYqnj8CigvkUZ9cYGr8GGsytSd9uj\nFrE7UA9RJb7LeV11tpMjbfeJ8l6Yy9wgKQbNn2s5AoGBALwDhCeHAmBtxzX3hGz+\nsO2wa7HehzSbpybSo0rrrZ/42jS7tW7HvDguCtb034i0zjSOP6N+5Yqqu5aQOlp/\nSc3u0kUgR7HewwkRY3zKxIvpf7CY2W4AFMnIo482rHN+0EHi889YVeJAY3r0pabw\nKao/A6vtT8mDkQnNe2ZioVT3\n-----END PRIVATE KEY-----\n",
+  "client_email": "washuproject@quantum-boulder-235000.iam.gserviceaccount.com",
+  "client_id": "104956803143526267321",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/washuproject%40quantum-boulder-235000.iam.gserviceaccount.com"
+}
