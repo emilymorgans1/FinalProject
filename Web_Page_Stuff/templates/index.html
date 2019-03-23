@@ -70,7 +70,7 @@
             <p><input type=file name=file accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
             <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
                <p><img id="output" width="200" /></p>
-               <input type=submit value=Indentify>
+               <input id= "identity-btn" type=submit value=Identify>
         
                <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
 
@@ -108,10 +108,12 @@
     </a>
   </div>
 
+  <div>{{ data }}</div>
+
 <!-- <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script> -->
   <!-- Bootstrap core JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-  <script src=<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Plugin JavaScript -->
   <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
@@ -123,6 +125,9 @@
 
   <!-- Custom scripts for this template -->
   <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src="static/js/app.js"></script>
 </body>
 
 </html>

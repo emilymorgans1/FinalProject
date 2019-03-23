@@ -11,6 +11,11 @@ from keras import backend as K
 
 from flask import Flask, request, redirect, url_for, jsonify, render_template
 
+from google.cloud import translate
+target = 'es'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Languagelearningapp-07a1e1d6b374.json"
+translate_client = translate.Client()
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'Uploads'
 
@@ -78,13 +83,19 @@ def upload_file():
                 # loop over the results and add them to the list of
                 # returned predictions
                 for (imagenetID, label, prob) in results[0]:
-                    r = {"label": label, "probability": float(prob)}
+                    
+    
+                    translation = translate_client.translate(label, target_language=target)
+  
+                    r = {"label": label, "translation": translation["translatedText"]}
                     data["predictions"].append(r)
+
 
                 # indicate that the request was a success
                 data["success"] = True
 
-        return jsonify(data)
+        return  render_template("index.html", data = data)
+       
 
     #return '''
     # <!doctype html>
@@ -97,6 +108,8 @@ def upload_file():
     # '''
 
     return render_template ("index.html")
+
+
     
 
 if __name__ == "__main__":
