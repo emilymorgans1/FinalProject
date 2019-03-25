@@ -39,3 +39,28 @@
 
 //   // Prevent the form from refreshing the page
 //   d3.event.preventDefault();
+$(function () {
+    // when the submit for is clicked
+    $('#submit').on('click', function (event) {
+        event.preventDefault();
+
+        form_info = $('#upload-file')[0];
+        // lets take the whole tak=ble and sned it over to flask
+        form_data = new FormData(form_info);
+        var file = $('#img_file').val();
+        
+        $.ajax({
+            type: 'POST',
+            url: '/uploadfile',
+            data: form_data,
+            contentType: false,
+            dataType: 'json',
+            cache: false,
+            processData: false
+        }).then(function (res) {
+            // after the prediction the results are sent as 'res'
+            // you an now use 'res' to build your table as you wish
+            console.log(res);
+        });
+    });
+});
