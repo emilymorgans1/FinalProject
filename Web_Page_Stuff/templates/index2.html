@@ -29,6 +29,7 @@
 
   <!-- Custom styles for this template -->
   "{{ url_for('static', filename='css/freelancer.min.css') }}"
+
   <link href="{{ url_for('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
 
 </head>
@@ -64,9 +65,16 @@
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-      <h1 class="text-uppercase mb-0">Start Learning Spanish</h1>
+      <h1 class="text-uppercase mb-0">Start Learning</h1>
       <hr class="star-light">
       <form enctype="multipart/form-data" id="upload-file">
+        <br>
+        <select name="lang_options">
+          <option value= "es">Spanish</option>
+          <option value= "fr">French</option>
+          <option value= "it">Italian</option>
+        </select>
+        <br>
 
         <input type="file"  accept="image/*" name="img_file" id="img_file"  onchange="loadFile(event)" style="display: none;">
         <label for="img_file" style="cursor: pointer;">Upload Image</label></p>
@@ -96,7 +104,7 @@
     var translation = '{{ data }}';
   </script>
 
-  <table border="1">
+  <!-- <table border="1">
     <thead>
       <tr>
         <th colspan="4" bgcolor="#ccc">Translation</th>
@@ -107,11 +115,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr> -->
         <!-- <td>{#{{data.predictions[0]}}#}</td> -->
         <!-- <td>Tim</td> -->
-      </tr>
+      <!-- </tr> -->
     <div class="myelement"></div>
+  
       <script>
         var loadFile = function (event) {
 

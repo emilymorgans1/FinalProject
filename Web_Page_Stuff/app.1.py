@@ -27,7 +27,7 @@ from keras.applications.xception import (
 from keras import backend as K
 
 from google.cloud import translate
-target = 'es'
+# target = 'es'
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Languagelearningapp-07a1e1d6b374.json"
 translate_client = translate.Client()
 
@@ -78,6 +78,8 @@ def upload_file():
         if request.files.get('img_file'):
             # read the file
             file = request.files['img_file']
+            target=request.form.get("lang_options")
+            
 
             # read the filename
             filename = file.filename
