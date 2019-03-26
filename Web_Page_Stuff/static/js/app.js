@@ -60,7 +60,16 @@ $(function () {
         }).then(function (res) {
             // after the prediction the results are sent as 'res'
             // you an now use 'res' to build your table as you wish
-            console.log(res);
+            // console.log(res);
+            // success: function (res) {
+                var table = '<table>';
+                $.each( res.predictions, function( key, value ) {
+                  table += '<tr><td>' + value.label + '</td><td>' + value.translation + '</td></tr>';
+                });
+                    table += '</table>';
+                $('.myelement').html(table);
+            
         });
     });
 });
+
