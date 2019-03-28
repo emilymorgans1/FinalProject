@@ -28,7 +28,7 @@ from keras import backend as K
 
 from google.cloud import translate
 target = 'es'
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Languagelearningapp-07a1e1d6b374.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "MyProject-87540abb832b.json"
 translate_client = translate.Client()
 
 from flask import Flask, request, redirect, url_for, jsonify, render_template
@@ -121,6 +121,7 @@ def upload_file():
                 # indicate that the request was a success
                 data["success"] = True
         return jsonify(data)
+        
 
 # @app.route("/getfile", methods=['GET', 'POST'])
 # def getFile():
