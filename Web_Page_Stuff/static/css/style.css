@@ -1,0 +1,23 @@
+.language_table{
+    margin-top: 0px}
+th {
+  color: white;
+}
+td {
+    color: white;
+  }
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+#banner {
+    width: 100%;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 100%;
+}
+body{
+    padding: 0;
+    margin:0;
+}

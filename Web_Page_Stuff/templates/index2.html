@@ -15,73 +15,116 @@
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  "{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}"
-  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
     type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
     type="text/css">
 
   <!-- Plugin CSS -->
-  "{{ url_for('static', filename='vendor/magnific-popup/magnific-popup.css') }}"
+
   <link href="{{ url_for('static', filename='vendor/magnific-popup/magnific-popup.css') }}" rel="stylesheet"
     type="text/css">
 
   <!-- Custom styles for this template -->
-  "{{ url_for('static', filename='css/freelancer.min.css') }}"
+  
+
   <link href="{{ url_for('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
+    <div id="banner">
+        <div id="wrapper" style="width:100%; overflow:hidden;">
+            <div id="banner" style="width:100%; margin-right:auto;">
+                    <img style="width: 100%;" href="https://www.shutterstock.com/image-vector/diverse-group-people-talking-different-languages-1041243745" >
+
+            </div>
+        </div>
+    </div>
+
+
+
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
-        data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a> 
+</div>
     </div>
-  </nav>
+</nav> 
 
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-      <h1 class="text-uppercase mb-0">Start Learning Spanish</h1>
+      <div class = "row">
+      <div class = "col-md-12" >
+      <h1 class="text-uppercase mb-0">Start Learning</h1>
       <hr class="star-light">
-      <form enctype="multipart/form-data" id="upload-file">
+      </div>
+    </div>
 
-        <input type="file"  accept="image/*" name="img_file" id="img_file"  onchange="loadFile(event)" style="display: none;">
-        <label for="img_file" style="cursor: pointer;">Upload Image</label></p>
-        <br/>
-        {# <p><label for="file" style="cursor: pointer;">Upload Image</label></p> #}
+    <div class="container">
+        <div class = "row">
+        <div class = "col-md-12" >
+            <form enctype="multipart/form-data" id="upload-file">
+              <br>
+              <select name="lang_options">
+                <option value= "es">Spanish</option>
+                <option value= "fr">French</option>
+                <option value= "it">Italian</option>
+              </select>
+              <br>
+      
+              <input type="file"  accept="image/*" name="img_file" id="img_file"  onchange="loadFile(event)" style="display: none;">
+              <label for="img_file" style="cursor: pointer;">Upload Image</label></p>
+              <br/>
+              {# <p><label for="file" style="cursor: pointer;"><button>Upload Image</label></button></p> #}
+            </div>
+          </div>
+        </div>
+    <div class="container">
+      <div class = "row">
+      <div class = "col-md-4" >
         <p><img id="output" width="200" /></p>
 
-        <button id="submit" class="btn btn-primary">Identify</button>
+        <button id="submit" >Identify</button>
 
         <p>
           <img src={{file}}>
         </p>
       </form>
-      <a href="/"> <button>Reset</button></a>
+      <!-- <a href="/"> <button>Reset</button></a> -->
     </div>
+
+    <div class= "col-md-8">
+        <table border="1" class = "language_table table table-hover table-striped table-bordered" id="markerlist" color="red">
+            <thead>
+              <tr>
+                <th colspan="4" bgcolor="#ccc"></th>
+              </tr>
+              <tr>
+                <th>English</th>
+                <th>Translation</th>
+              </tr>
+            </thead>
+            <tbody  class="myelement" id="markerbody">
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class = "row">
+    <div class = "col-md-12" >
+        <a href="/"> <button>Reset</button></a>
+      </div>
+    </div>
+  </div>
+
   </header>
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-to-top d-lg-none position-fixed ">
@@ -95,7 +138,7 @@
   <script>
     var translation = '{{ data }}';
   </script>
-
+<!-- 
   <table border="1">
     <thead>
       <tr>
@@ -106,12 +149,15 @@
         <th>Spanish</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>{#{{data.predictions[0]}}#}</td>
-        <td>Tim</td>
-      </tr>
+    <tbody  class="myelement">
+    </tbody>
+  </table> -->
+        <!-- <td>{#{{data.predictions[0]}}#}</td> -->
+        <!-- <td>Tim</td> -->
+      <!-- </tr> -->
 
+    <!-- <div class="myelement"></div> -->
+  
       <script>
         var loadFile = function (event) {
 
