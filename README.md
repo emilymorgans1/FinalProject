@@ -7,6 +7,8 @@ On the back end we have used Xception (the pretrained model) to do the predictio
 Final deployment is on Heroku.
 
 https://transproject.herokuapp.com
+
+
 https://learnlanguageapp.herokuapp.com/
 
 
